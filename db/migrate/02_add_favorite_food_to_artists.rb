@@ -1,5 +1,5 @@
-class AddFavoriteFoodToArtists < ActiveRecord::Migration[4.2]
+class AddGenderToArtists < ActiveRecord::Migration
   def change
-    add_column :artists, :favorite_food, :string
+    add_column :artists, :gender, :string
   end
-end
+end 
