@@ -1,16 +1,5 @@
-class CreateArtists < ActiveRecord::Migration[5.2]
-  def self.create_table
-    sql = <<-SQL
-      CREATE TABLE IF NOT EXISTS songs (
-      id INTEGER PRIMARY KEY,
-      title TEXT,
-      length INTEGER
-      )
-    SQL
-    ActiveRecord::Base.connection.execute(sql)
-  end
-
-   def change
+class CreateArtists < ActiveRecord::Migration[4.2]
+  def change
     create_table :artists do |t|
       t.string :name
       t.string :genre
